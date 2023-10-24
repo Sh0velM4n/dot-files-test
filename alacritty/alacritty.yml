@@ -1,0 +1,25 @@
+
+
+
+import:
+ - ~/.config/alacritty/themes/themes/{theme}.yaml
+
+font:
+  normal:
+    family: CommitMono
+    style: Regular
+
+  bold:
+    family: CommitMono
+    style: Bold
+
+  italic:
+    family: CommitMono
+    style: Italic
+
+  bold_italic:
+    family: CommitMono
+    style: Bold Italic
+
+  size: 16
+
