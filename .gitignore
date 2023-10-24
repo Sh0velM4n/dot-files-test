@@ -1,7 +1,0 @@
-*
-!.gitignore
-!/nvim/
-!/tmux/
-!/doom/
-!/btop/
-!/nvim/lua/shovel/plugins/
