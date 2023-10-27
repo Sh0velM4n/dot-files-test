@@ -1,6 +1,6 @@
 local mapkey = require("shovel.util.keymapper").mapkey
 
-M = {}
+local M = {}
 
 M.diagnostic_signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 

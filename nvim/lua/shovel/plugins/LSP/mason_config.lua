@@ -2,6 +2,7 @@ local opts = {
 	ensure_installed = {
 		"efm",
 		"lua_ls",
+		"intelephense",
 	},
 
 	automatic_installation = true,

@@ -4,14 +4,19 @@ local diagnostic_signs = require("shovel.util.lsp").diagnostic_signs
 local config = function()
 	require("neoconf").setup({})
 	local lspconfig = require("lspconfig")
+	local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 	for type, icon in pairs(diagnostic_signs) do
 		local hl = "DiagnosticSign" .. type
 		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 	end
 
+	local capabilities = cmp_nvim_lsp.default_capabilities()
+
+	lspconfig.intelephense.setup({ on_attach = on_attach, capabilities = capabilities, })
+
 	lspconfig.lua_ls.setup({
-		-- capabilities = capabilities,
+		capabilities = capabilities,
 		on_attach = on_attach,
 		settings = { -- custom settings for lua
 			Lua = {
@@ -73,7 +78,10 @@ return {
 	lazy = false,
 	dependencies = {
 		"windwp/nvim-autopairs",
-		"williamboman/mason-lspconfig.nvim",
+		"williamboman/mason.nvim",
 		"creativenull/efmls-configs-nvim",
+		"hrsh7th/nvim-cmp",
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-nvim-lsp",
 	},
 }
