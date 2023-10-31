@@ -20,4 +20,4 @@ local opt = vim.opt -- for conciseness
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
-opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+ -- opt.clipboard:append("unnamedplus") -- use system clipboard as default register
